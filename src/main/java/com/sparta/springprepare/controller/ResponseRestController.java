@@ -23,6 +23,6 @@ public class ResponseRestController {
     //   {"name":"Robbie","age":95}
     @GetMapping("/json/class")
     public Star helloClassJson() {
-        return new Star("Robbie", 95);
+        return new Star("Robbie", 95, "1");
     }
 }
