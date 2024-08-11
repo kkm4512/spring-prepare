@@ -61,6 +61,9 @@
         이름: <input name="name" type="text">
     </div>
     <div>
+        취미: <input name="hobby" type="text">
+    </div>
+    <div>
         나이: <input name="age" type="text">
     </div>
     <button>전송</button>
@@ -101,7 +104,8 @@
 
         const data = {
             name: form.querySelector('input[name="name"]').value,
-            age: form.querySelector('input[name="age"]').value
+            age: form.querySelector('input[name="age"]').value,
+            hobby: form.querySelector('input[name="hobby"]').value
         }
 
         const response = await fetch('/hello/request/form/json', {
