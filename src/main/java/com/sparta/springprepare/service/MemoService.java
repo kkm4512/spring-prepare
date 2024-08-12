@@ -4,16 +4,17 @@ import com.sparta.springprepare.dto.MemoRequestDto;
 import com.sparta.springprepare.dto.MemoResponseDto;
 import com.sparta.springprepare.entity.Memo;
 import com.sparta.springprepare.repository.MemoRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
+@Service
+@RequiredArgsConstructor //객체의 불변성
 public class MemoService {
-    private MemoRepository memoRepository;
-
-    public MemoService(MemoRepository memoRepository) {
-        this.memoRepository = memoRepository;
-    }
-
+    private final MemoRepository memoRepository;
+    
     public MemoResponseDto createMemo(MemoRequestDto requestDto) {
         // RequestDto -> Entity
         Memo memo = new Memo(requestDto);

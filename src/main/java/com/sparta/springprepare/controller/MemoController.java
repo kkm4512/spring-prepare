@@ -21,7 +21,6 @@ public class MemoController {
     //Test add
     public MemoResponseDto createMemo(@RequestBody MemoRequestDto requestDto) {
         return memoService.createMemo(requestDto);
-
     }
 
     @GetMapping("/memos")
